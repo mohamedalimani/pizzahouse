@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 @section('content')
 <h1>pizzas</h1>
 <p>home of the shittiest pizza u'll ever taste</p>

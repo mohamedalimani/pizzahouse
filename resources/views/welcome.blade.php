@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-<a href="/pizzas/create" style="margin-left:30px;color:rgb(29, 2, 2);">-> Order a Pizza</a>
+<a href="{{route('pizzas.create')}}" style="margin-left:30px;color:rgb(29, 2, 2);">-> Order a Pizza</a>
 <h5 class="msg">{{session('msg')}}</h5>
 <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))

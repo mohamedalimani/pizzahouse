@@ -19,15 +19,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pizzas',$dir.'@index') ; 
+Route::get('/pizzas',$dir.'@index')->name('pizzas.index')->middleware('auth') ; 
 
-Route::get('/pizzas/create',$dir.'@create') ;
+Route::get('/orders/pizzas/create',$dir.'@create')->name('pizzas.create') ;
 
-Route::post('/pizzas',$dir.'@store') ;
+Route::post('/pizzas',$dir.'@store')->name('pizzas.store') ;
 
-Route::get('/pizzas/{id}',$dir.'@show') ; 
+Route::get('/pizzas/{id}',$dir.'@show')->name('pizzas.show')->middleware('auth') ;  ; 
 
-Route::delete('/pizzas/{id}',$dir.'@destroy') ;
+Route::delete('/pizzas/{id}',$dir.'@destroy')->name('pizzas.destroy')->middleware('auth') ;  ;
 
 
 Auth::routes();
